@@ -1,0 +1,22 @@
+{
+  "name": "api_subemovil",
+  "version": "1.0.0",
+  "description": "Api rest app sube movil para consumir puntos de recargas, ventas, etc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcespinoza/api_subemovil.git"
+  },
+  "author": "Marcelo Espinoza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcespinoza/api_subemovil/issues"
+  },
+  "homepage": "https://github.com/marcespinoza/api_subemovil#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
