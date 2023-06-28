@@ -19,11 +19,10 @@ app.get('/api/recargas', (req, res) => {
 })
 
 app.post('/api/recargas', (req, res) => {
-    console.log(req.body);
+    console.log(req.body.provincia);
 
-    fs.readFile(__dirname + "/" + "BA.json", 'utf-8', function( err, data){
-        console.log(req.body);
-        res.end("anduvo");
+    fs.readFile(__dirname + "/" + req.body.provincia+".json", 'utf-8', function( err, data){
+        res.end(data);
     });
 })
 
