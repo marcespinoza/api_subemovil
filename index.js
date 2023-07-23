@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
     res.send('Sube movil api')
 });
 
-app.get('/api/recargas', (req, res) => {
+app.get('/api/getrecargas', (req, res) => {
     fs.readFile(__dirname + "/" + "BA.json", 'utf-8', function( err, data){
         console.log(data);
         res.end(data);
