@@ -23,7 +23,7 @@ app.post('/api/recargas', (req, res) => {
 
     fs.readFile(__dirname + "/" + req.body.provincia+".json", 'utf-8', function( err, data){
         if(typeof data == "undefined"){
-            res.status(400).json({status: err.status, message: err.message})
+            res.status(400).json({ err: 'No se encontró provincia' })
         }else
             res.send(data)
     });
