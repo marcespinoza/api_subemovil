@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
     res.send('Sube movil api')
 });
 
-app.get('/api/recargas', (req, res) => {
+app.get('/api/getrecargas', (req, res) => {
     fs.readFile(__dirname + "/" + "BA.json", 'utf-8', function( err, data){
         console.log(data);
         res.end(data);
@@ -22,9 +22,9 @@ app.post('/api/recargas', (req, res) => {
     console.log(req.body.provincia);
 
     fs.readFile(__dirname + "/" + req.body.provincia+".json", 'utf-8', function( err, data){
-        if(typeof data == "undefined")
-            res.status(400).send("No se encontró provincia");
-        else
+        if(typeof data == "undefined"){
+            res.status(400).json({ err: 'No se encontró provincia' })
+        }else
             res.send(data)
     });
 })
